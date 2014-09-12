@@ -1,0 +1,4 @@
+name = "Current Weather"
+package = "Mahaffie"
+description = "Adds the current weather for a block."
+core = 7.x

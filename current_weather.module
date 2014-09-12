@@ -1,0 +1,24 @@
+<?php
+/**
+ * Display help and module information
+ */
+
+function current_weather_help($path, $arg) {
+  $output = ''; // declare the output variable
+  switch ($path) {
+    case "admin/help#current_weather":
+      $output = '<p>' . t("Add the current weather to a block.") . '</p>';
+      break;
+  }
+  return $output;
+} // function current_weather_help
+
+
+  /*
+  * Add the CSS and JavaScript to the page
+  */
+function current_weather_init() {
+  global $node;
+  drupal_add_css(drupal_get_path('module', 'current_weather') .'/current_weather.css');
+  drupal_add_js(drupal_get_path('module', 'current_weather') .'/current_weather.js');
+}
